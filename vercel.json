@@ -1,5 +1,11 @@
 {
-  "installCommand": "npm install",
+  "version": 2,
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
+  ],
   "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "installCommand": "npm install",
+  "routes": [
+    { "src": "/(.*)", "dest": "/" }
+  ]
 }
