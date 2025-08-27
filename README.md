@@ -1,5 +1,6 @@
 # Eastern WA Cleaning Route Optimizer
 
+
 Plan optimized routes for multiple cleaning teams across Eastern Washington, honor client frequency + time windows, and get smart reschedule suggestions. Google Maps integration for live maps/directions.
 
 ## Quick Start (no coding)
