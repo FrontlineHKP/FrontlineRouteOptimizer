@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { GoogleMap, Marker, DirectionsRenderer, useJsApiLoader } from "@react-google-maps/api";
-import { v4 as uuid } from "uuid";
 
 export default function App() {
   const [apiKey, setApiKey] = useState(import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "");
@@ -126,7 +125,7 @@ export default function App() {
             onClick={() => {
               const name = document.getElementById("cname").value;
               const addr = document.getElementById("caddr").value;
-              const client = { id: uuid(), name, address: addr, lat: null, lng: null };
+              const client = { id: Date.now().toString(), name, address: addr, lat: null, lng: null };
               setClients(prev => [...prev, client]);
             }}
           >
